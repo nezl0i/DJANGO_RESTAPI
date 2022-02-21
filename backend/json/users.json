@@ -1,0 +1,14 @@
+[
+  {
+    "username": "bob2",
+    "first_name": "bob2_cool",
+    "last_name": "cool_bob2",
+    "email": "bob2@local.ru"
+  },
+    {
+    "username": "root2",
+    "first_name": "root2_cool",
+    "last_name": "cool_root2",
+    "email": "root2@local.ru"
+  }
+]
