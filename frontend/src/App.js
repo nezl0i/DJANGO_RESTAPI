@@ -28,41 +28,24 @@ class App extends React.Component {
 
     render() {
         return (
-            <div
-                style={{
-                    marginLeft: "40%"
-                }}
-            >
-                <Button
-                    aria-controls='simple-menu'
-                    aria-haspopup='true'
-                    onClick={this.state}
+            <div>
+                <div
+                    style={{
+                        marginLeft: "0%"
+                    }}
+                >
+                    <Button
+                        aria-controls='simple-menu'
+                        aria-haspopup='true'
+                        onClick={this.state}
                     >Menu</Button>
-                <UserList users={this.state.users}/>
+                </div>
+                <div>
+                    <UserList users={this.state.users}/>
+                </div>
             </div>
-    )
+        )
     }
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;

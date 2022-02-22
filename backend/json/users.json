@@ -3,12 +3,14 @@
     "username": "bob2",
     "first_name": "bob2_cool",
     "last_name": "cool_bob2",
-    "email": "bob2@local.ru"
+    "email": "bob2@local.ru",
+    "password": "pbkdf2_sha256$260000$82RLW9BbtcwKMhiaklPqi7$Mk0IuI9TZd+4I3/h1czE0jrpcEMqLCdpZfDw351qT8w="
   },
     {
     "username": "root2",
     "first_name": "root2_cool",
     "last_name": "cool_root2",
-    "email": "root2@local.ru"
+    "email": "root2@local.ru",
+    "password": "pbkdf2_sha256$260000$82RLW9BbtcwKMhiaklPqi7$Mk0IuI9TZd+4I3/h1czE0jrpcEMqLCdpZfDw351qT8w="
   }
 ]
