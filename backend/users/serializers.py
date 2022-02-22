@@ -7,4 +7,4 @@ class RestUserSerializer(ModelSerializer):
 
     class Meta:
         model = RestUser
-        fields = ('username', 'first_name', 'last_name', 'email')
+        fields = ('id', 'username', 'first_name', 'last_name', 'email')

@@ -1,10 +1,12 @@
-from django.shortcuts import render
-from rest_framework.viewsets import ModelViewSet
+from rest_framework import mixins, viewsets
+
 from .models import RestUser
 from .serializers import RestUserSerializer
 
 
-class RestUserViewSet(ModelViewSet):
+class RestUserViewSet(mixins.ListModelMixin,
+                      mixins.RetrieveModelMixin,
+                      mixins.UpdateModelMixin,
+                      viewsets.GenericViewSet):
     queryset = RestUser.objects.all()
     serializer_class = RestUserSerializer
-    
