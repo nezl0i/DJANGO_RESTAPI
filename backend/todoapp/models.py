@@ -8,7 +8,7 @@ class Project(models.Model):
     repository = models.URLField(blank=True)
 
     def __str__(self):
-        return self.name
+        return f'{self.name}: {self.repository}'
 
 
 class ToDo(models.Model):
