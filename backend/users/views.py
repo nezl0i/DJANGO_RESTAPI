@@ -15,4 +15,4 @@ class RestUserViewSet(mixins.ListModelMixin,
                       viewsets.GenericViewSet):
     queryset = RestUser.objects.all()
     serializer_class = RestUserSerializer
-    pagination_class = RestUserPagination
+    # pagination_class = RestUserPagination
