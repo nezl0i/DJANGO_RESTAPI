@@ -18,3 +18,6 @@ class ToDo(models.Model):
     update = models.DateTimeField(auto_now=True)
     creator = models.ForeignKey(RestUser, on_delete=models.PROTECT)
     is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return f'{self.project}: {self.creator} || {self.text}'
