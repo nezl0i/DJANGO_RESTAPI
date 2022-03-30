@@ -10,6 +10,9 @@ class Project(models.Model):
     def __str__(self):
         return f'{self.name}: {self.repository}'
 
+    def get_users(self):
+        return ','.join([str(p) for p in self.users.all()])
+
 
 class ToDo(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
