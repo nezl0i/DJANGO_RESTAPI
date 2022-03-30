@@ -37,4 +37,10 @@ urlpatterns = [
          name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0),
          name='schema-redoc'),
+    # http://127.0.0.1:8009/api/0.2/users/
+    # re_path(r'^api/(?P<version>\d\.\d)/users/$', RestUserViewSet.as_view()),
+
+    # http://127.0.0.1:8009/api/users/0.1
+    # path('api/users/0.1', include('users.urls', namespace='0.1')),
+    # path('api/users/0.2', include('users.urls', namespace='0.2')),
 ]
