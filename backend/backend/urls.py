@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
+from graphene_django.views import GraphQLView
 from rest_framework import permissions
 from rest_framework.authtoken.views import obtain_auth_token
 from rest_framework.routers import DefaultRouter
@@ -37,6 +38,7 @@ urlpatterns = [
          name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0),
          name='schema-redoc'),
+    path("graphql/", GraphQLView.as_view(graphiql=True)),
     # http://127.0.0.1:8009/api/0.2/users/
     # re_path(r'^api/(?P<version>\d\.\d)/users/$', RestUserViewSet.as_view()),
 
