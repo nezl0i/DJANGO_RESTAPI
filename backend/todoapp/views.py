@@ -32,7 +32,7 @@ class ProjectViewSet(ModelViewSet):
 
 class ToDoViewSet(ModelViewSet):
     serializer_class = ToDoSerializer
-    queryset = ToDo.objects.all()
+    queryset = ToDo.objects.filter(is_active=True)
     # pagination_class = ToDoPagination
     filter_backends = [DjangoFilterBackend]
     filterset_class = TodoFilter

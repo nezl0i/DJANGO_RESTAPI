@@ -11,7 +11,7 @@ class RestUserPagination(PageNumberPagination):
 
 
 class RestUserViewSet(viewsets.ModelViewSet):
-    queryset = RestUser.objects.all()
+    queryset = RestUser.objects.filter(is_active=True)
     # serializer_class = RestUserSerializer
     # pagination_class = RestUserPagination
 
