@@ -15,15 +15,13 @@ const ProjectItem = ({project, deleteProject}) => {
 }
 
 
-
-
 const ProjectList = ({projects, deleteProject}) => {
 
     const [value, setValue] = useState('')
 
     const filteredProjects = projects.filter(project => {
         return project.name.includes(value)
-})
+    })
 
     return (
         <div className="container">
@@ -37,8 +35,7 @@ const ProjectList = ({projects, deleteProject}) => {
                         className="search-input form-control"
                         placeholder="Search project"
                         onChange={(event) => setValue(event.target.value)}
-                        />
-
+                    />
                 </form>
             </div>
 
