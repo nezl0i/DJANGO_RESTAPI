@@ -6,7 +6,7 @@ from users.models import RestUser
 class RestUserSerializer(ModelSerializer):
     class Meta:
         model = RestUser
-        fields = ('id', 'username', 'first_name', 'last_name', 'email', 'is_active')
+        fields = ('id', 'username', 'first_name', 'last_name', 'email', 'password', 'is_active')
 
         def create(self, validated_data):
             user = RestUser.objects.create(validated_data['email'], None, make_password(validated_data['password']))
