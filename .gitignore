@@ -12,6 +12,7 @@ __pycache__/
 /coverage
 frontend/node_modules/*
 /build
+/frontend/src/bootstrap
 
 .DS_Store
 .env.local

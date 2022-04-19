@@ -10,6 +10,9 @@ class Project(models.Model):
     def __str__(self):
         return f'{self.name}: {self.repository}'
 
+    def get_users(self):
+        return ','.join([str(p) for p in self.users.all()])
+
 
 class ToDo(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
@@ -18,3 +21,6 @@ class ToDo(models.Model):
     update = models.DateTimeField(auto_now=True)
     creator = models.ForeignKey(RestUser, on_delete=models.PROTECT)
     is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return f'{self.project}: {self.creator} || {self.text}'
